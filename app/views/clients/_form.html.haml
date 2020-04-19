@@ -1,7 +1,7 @@
 = simple_form_for client do |f|
-    = f.input :client_number, input_html: { class: "form-control" }
-    = f.input :first_name, input_html: { class: "form-control" }
-    = f.input :last_name, input_html: { class: "form-control" }
+    = f.input :client_number, input_html: { class: "form-control" }, label: false, placeholder: "Client Number"
+    = f.input :first_name, input_html: { class: "form-control" }, label: false, placeholder: "First Name"
+    = f.input :last_name, input_html: { class: "form-control" }, label: false, placeholder: "Last Name"
     %hr
     .form-actions
         = f.submit class: "btn btn-success" do

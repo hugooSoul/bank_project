@@ -9,7 +9,7 @@ Those transaction are base in Ajax request to an endpoint.
 Account can't be deleted if have money.
 * Ruby version
     '2.6.3'
-    
+
 * Database creation
 `rails db:migrate`
 
@@ -49,7 +49,6 @@ or you can create it in the console like:
     * Use Devise or a similar Gem to make a Admin secction 
     * Unit tests (Rspec)
     * Deploy to a server
-
 
 ## Deployment instructions
 
