@@ -70,11 +70,11 @@ The balance in the form is not required because if is a new record gets 0.00 by 
 
 ## Missing
     * Style
-    * Use a Front Framework like React 
+    * Use a Front Framework like React [React Project](https://github.com/hugooSoul/rails_react_recipe)
     * A client can't make transactions to other accounts, just theirs.
     * Use Devise or a similar Gem to make a Admin secction 
     * Unit tests (Rspec)
     * Deploy to a server
-
+    
 ## Deployment instructions
 
