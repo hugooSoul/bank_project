@@ -6,7 +6,7 @@
 App to create clients with a bank account to perform witdraws and deposits transactions into the same account or theirs.
 
 Those transaction are base in Ajax request to an endpoint.
-
+Account can't be deleted if have money.
 * Ruby version
     '2.6.3'
 
@@ -47,6 +47,7 @@ or you can create it in the console like:
     * Use a Front Framework like React 
     * A client can't make transactions to other accounts, just theirs.
     * Use Devise or a similar Gem to make a Admin secction 
+    * Unit tests (Rspec)
     * Deploy to a server
 
 
