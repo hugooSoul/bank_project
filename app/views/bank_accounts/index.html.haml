@@ -4,7 +4,7 @@
 = link_to new_bank_account_path, class: "btn btn-success" do 
     New Bank Account
 
-%table.table.table-bordered
+%table.table.table-hover
     %thead
         %tr
             %th Account Number
@@ -20,5 +20,5 @@
                         #{bank_account.client}
                 %td #{number_to_currency(bank_account.balance, precision: 2, unit: '$')}
                 %td 
-                    = link_to bank_account_path(bank_account.id), class: "btn btn-primary" do
+                    = link_to bank_account_path(bank_account.id), class: "btn btn-info" do
                         Show
