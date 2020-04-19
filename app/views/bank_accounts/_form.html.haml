@@ -1,0 +1,9 @@
+= simple_form_for bank_account, html: { class: 'form-horizontal' } do |f|
+    = f.association :client, input_html: { class: "form-control" }, prompt: "Select an existing Client", label: false
+    = f.input :account_number, input_html: { class: "form-control" }, label: false, placeholder: "Set Account Number"
+    %hr
+    .form-actions
+        = f.submit class: "btn btn-success" do
+            Save Bank Account
+        = link_to root_path, class: "btn btn-default" do
+            Cancel

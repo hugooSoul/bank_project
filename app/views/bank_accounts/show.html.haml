@@ -1,0 +1,55 @@
+%h1
+    Account Number: #{@bank_account.account_number}
+    %small
+        #{@bank_account.client}
+
+= button_tag :new_transaction, id: "btn-new-transaction", class: "btn btn-success" do
+    New Transaction
+
+= link_to client_path(@bank_account.client.id), class: "btn btn-default" do
+    Back to #{@bank_account.client}
+
+= render partial: "transactions", locals: { bank_account: @bank_account }
+
+= link_to edit_bank_account_path(@bank_account.id), class: "btn btn-info" do 
+    Edit Bank Account
+
+= link_to bank_account_path(@bank_account.id), method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure to delete this account?' } do
+    Delete Account
+
+#parameters{ data: { bank_account_id: @bank_account.id } }
+
+#modal-transaction.modal.fade.modal-fade
+    .modal-dialog
+        .modal-content
+            .modal-header
+                %button.close{type:'button', data:{dismiss:'modal'}}
+                    %span{aria:{hidden:'true'}}
+                        %i.fa.fa-close
+                    %span.sr-only Close
+                %h4.modal-title
+                    New Transaction
+            .modal-body
+                .row
+                    .col-md-12
+                        .notification
+                .row
+                    .col-md-6
+                        %label
+                            Amount
+                        = text_field_tag :amount, 0.00, id: "input-amount", class: "form-control"
+                    .col-md-6
+                        %label 
+                            Transaction Type
+                        = select_tag :transaction_type, options_for_select(Transaction::TYPES), id: "select-types", class: "form-control"
+            .modal-footer
+                %button.btn.btn-default{type:'button', data:{dismiss:'modal'}} Close
+                %button#btn-save.btn.btn-primary{type:'button'} Save
+
+
+
+= javascript_include_tag 'bank_accounts/show'
+:javascript
+    $(document).ready(function(){
+        show.init();
+    });

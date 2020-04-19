@@ -1,0 +1,20 @@
+.jumbotron
+    .container
+        %h2
+            Hugo's Bank
+
+            .row
+                .col-md-12
+                    %p
+                        We have 
+                        %b #{number_of_clients} 
+                        Clients registered
+
+            .row
+                .col-md-12
+                    .col-md-6
+                        = link_to new_bank_account_path, html_options = {class: "btn btn-info btn-lg"} do
+                            Create Bank Account
+                    .col-md-6
+                        = link_to new_client_path, html_options = {class: "btn btn-info btn-lg"} do
+                            Create Client
