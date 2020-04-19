@@ -9,6 +9,9 @@ Those transaction are base in Ajax request to an endpoint.
 Account can't be deleted if have money.
 * Ruby version
     '2.6.3'
+    
+* Database creation
+`rails db:migrate`
 
 * Configuration
 ```
@@ -38,9 +41,6 @@ or you can create it in the console like:
  $ BankAccount.create!(client: client, account_number: "000000001")
  $ exit
  ```
-
-* Database creation
-`rails db:migrate`
 
 ## Missing
     * Style
