@@ -1,5 +1,3 @@
-# README
-
 # Bank APP
 
 > Ruby on Rails 5
@@ -44,13 +42,13 @@ or you can create it in the console like:
 * Database creation
 `rails db:migrate`
 
-* Missing
- * Style
- * Use a Front Framework like React 
- * A client can't make transactions to other accounts, just theirs.
- * Use Devise or a similar Gem to make a Admin secction 
- * Deploy to a server
+## Missing
+    * Style
+    * Use a Front Framework like React 
+    * A client can't make transactions to other accounts, just theirs.
+    * Use Devise or a similar Gem to make a Admin secction 
+    * Deploy to a server
 
 
-* Deployment instructions
+## Deployment instructions
 
