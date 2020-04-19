@@ -1,9 +1,11 @@
 %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", :rel => "stylesheet"}/
 
-%h1
-    Client: #{@client}
-    %small
-        #{@client.client_number}
+%h2
+    Client Name: #{@client}
+    
+%p
+    Client Number: 
+    %b #{@client.client_number}
 
 = link_to edit_client_path(@client), class: "btn btn-info" do
     Edit Client
