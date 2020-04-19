@@ -42,6 +42,32 @@ or you can create it in the console like:
  $ exit
  ```
 
+## Models
+There are 3 models: Clients, BankAccount and Transactions
+
+* Clients
+```
+:first_name
+:last_name
+:client_number
+```
+
+* BanAccount
+```
+:client
+:account_number
+:balance
+```
+The balance in the form is not required because if is a new record gets 0.00 by default.
+
+* Transaction
+```
+:bank_account
+:amount
+:transaction_number
+:transaction_type
+```
+
 ## Missing
     * Style
     * Use a Front Framework like React 
